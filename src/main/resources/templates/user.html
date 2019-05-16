@@ -23,15 +23,34 @@
 		      <th scope="col">아이디</th>
 		      <th scope="col">이름</th>
 		      <th scope="col">회사</th>
+		      <th scope="col">수정</th>
+		      <th scope="col">삭제</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <th scope="row"><span th:text="${id}"></span></th>
-		      <td><span th:text="${name}"></span></td>
-		      <td><span th:text="${company}"></span></td>      
-		    </tr>
-		    
+		    	<form class="form-horizontal" id="updateform">
+		      		<th scope="row"><span th:text="${id}"></span></th>
+		      		<input type="hidden" class="form-control" 
+		      			id="id" name="id" th:value="${id}"/>
+		      		<td><input type="text" class="form-contol" 
+		      			id="name" name="name" th:value="${name}"/></span></td>
+		      		<td><input type="text" class="form-contol" 
+		      			id="company" name="company" th:value="${company}"/></span></td>
+		      		<td>
+		      			<button type="submit" id="btn-update" 
+		      				class="btn btn-primary btn-sm">수정
+		      			</button>	
+		      		</td>	
+		      	</form>   
+		      	<td>  	 
+		     		<form class="form-horizontal" id="delform">
+		     	 		<input type="hidden" class="form-control" id="id" name="id" th:value="${id}"/>
+		     	 		<button type="submit" id="btn-delete" class="btn btn-danger btn-sm">삭제
+		     	 		</button>
+		     	 	</form>
+		     	</td>    
+		    </tr>		    
 		  </tbody>
 		</table>
 	   </div>
