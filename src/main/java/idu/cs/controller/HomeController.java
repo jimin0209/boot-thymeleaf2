@@ -32,7 +32,11 @@ public class HomeController {
 	}
 	@GetMapping("/")
 	public String loadWelcome(Model model) {
-		return "welcome";
+		return "index";
+	}
+	@GetMapping("/login")
+	public String loginUser(Model model) {
+		return "login";
 	}
 	@GetMapping("/users")
 	public String getAllUser(Model model) {
