@@ -1,6 +1,6 @@
 package idu.cs.domain;
 
-public class User {
+public class Question {
 	private long id; // primary key
 	private String userId; // unique key
 	private String userPw;	
